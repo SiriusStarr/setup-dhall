@@ -9,14 +9,20 @@ wget --quiet $2
 echo "Downloading dhall-yaml from: $3"
 wget --quiet $3
 
-# Extract dhall-json and dhall-yaml first, makes final shell glob easier
+echo "Downloading dhall-docs from: $4"
+wget --quiet $4
+
+# Extract dhall-json, dhall-yaml, and dhall-docs first, makes final shell glob easier
 tar --extract --bzip2 --file dhall-json-*.tar.bz2
 rm -f dhall-json-*.tar.bz2
 
 tar --extract --bzip2 --file dhall-yaml-*.tar.bz2
 rm -f dhall-yaml-*.tar.bz2
 
-# Extract dhall now that dhall-json is done
+tar --extract --bzip2 --file dhall-docs-*.tar.bz2
+rm -f dhall-docs-*.tar.bz2
+
+# Extract dhall now that others are done
 tar --extract --bzip2 --file dhall-*.tar.bz2
 rm -f dhall-*.tar.bz2
 

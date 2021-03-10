@@ -26,5 +26,6 @@ jobs:
       - name: Print version
         run: |
           echo "dhall version: $(dhall version)"
+          echo "dhall-docs version: $(dhall-docs --version)"
           echo "dhall-json version: $(dhall-to-json --version)"
           echo "dhall-yaml version: $(dhall-to-yaml --version)"

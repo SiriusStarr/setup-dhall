@@ -7,6 +7,7 @@ Github action to install a specific version of https://dhall-lang.org.
 This will add the following executables to your `PATH`, making them available for further actions:
 
 - `dhall`
+- `dhall-docs`
 - `dhall-to-json`
 - `dhall-to-yaml`
 - `json-to-dhall`
